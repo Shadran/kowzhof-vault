@@ -8,6 +8,12 @@ body {
     background-color: var(--body-background-color, #FAFAFA)
 }
 
+.index>ul {
+    height: 40vh;
+    overflow-y: scroll;
+    scroll-behavior: auto;
+}
+
 .round-button {
     background-color: #f2f2ff;
     border:none;
