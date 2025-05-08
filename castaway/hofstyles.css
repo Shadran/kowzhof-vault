@@ -72,7 +72,7 @@ body {
 }
 
 .main-post>.author>.author-image {
-	flex: 1 0 50px;
+	flex: 0 0 50px;
 }
 
 .main-post>.author>.author-image>img {
