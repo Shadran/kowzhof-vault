@@ -15,10 +15,28 @@ function toggleThreadCollapse(element) {
 	thread.classList.toggle('collapsed');
 }
 
+function scrollToClosestPost() {
+	const posts = Array.from(document.querySelectorAll('div.main-post'))
+		.concat(Array.from(document.querySelectorAll('div.post')));
+	const visiblePost = getElementIntoView(posts);
+	if (!!visiblePost) {
+		visiblePost.scrollIntoView({ behavior: 'smooth'});
+	}
+}
+
+function getElementIntoView(elements) {
+	const elementsIntoView = elements.filter(e => {
+		const rect = e.getBoundingClientRect();
+		return rect.top <= 0 && rect.bottom >= 0;
+	});
+	return elementsIntoView.find(() => true);
+}
+
 function hookButtons() {
 	document.querySelectorAll('button[name="expand"]').forEach(e => e.addEventListener("click", () => expandAllThreads(e)));
 	document.querySelectorAll('button[name="collapse"]').forEach(e => e.addEventListener("click", () => collapseAllThreads(e)));
 	document.querySelectorAll('span[name="collapse-thread"]').forEach(e => e.addEventListener("click", () => toggleThreadCollapse(e)));
+	document.querySelector('#button-back-to-post').addEventListener("click", () => scrollToClosestPost());
 	document.querySelector('#button-back-to-top').addEventListener("click", () => document.getElementById('post-beginning').scrollIntoView({ behavior: 'smooth' }));
 }
 

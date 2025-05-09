@@ -50,6 +50,7 @@ pre {
 @media (min-width: 992px) {
     .index-container {
         height: 100%;
+        max-width: 400px;
     }
 }
 
@@ -80,6 +81,13 @@ pre {
     position: fixed;
     bottom: 5px;
     right: 5px;
+}
+
+#button-back-to-post {
+    position: fixed;
+    bottom: 50px;
+    right: 5px;
+    font-weight: 800;
 }
 
 .main-title {
@@ -139,7 +147,6 @@ pre {
 
 }
 
-
 .post>.author>.author-image>img {
     width: 40px;
     border-radius: 20px;
@@ -152,15 +159,27 @@ pre {
 .post {
     max-width: 100%;  
     padding-left: 20px;
-    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: var(--post-background-color, white);
 }
 
 @media (min-width: 992px) {
+    .main-post {
+        max-width: 100%;  
+    }
     .post {
-        max-width: 60vw;  
+        max-width: 100%; 
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-post {
+        max-width: 60%;  
+    }
+    .post { 
+        max-width: 60%;  
     }
 }
 
