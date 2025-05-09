@@ -19,7 +19,7 @@ function hookButtons() {
 	document.querySelectorAll('button[name="expand"]').forEach(e => e.addEventListener("click", () => expandAllThreads(e)));
 	document.querySelectorAll('button[name="collapse"]').forEach(e => e.addEventListener("click", () => collapseAllThreads(e)));
 	document.querySelectorAll('span[name="collapse-thread"]').forEach(e => e.addEventListener("click", () => toggleThreadCollapse(e)));
-	document.querySelector('#button-back-to-top').addEventListener("click", () => document.getElementById('index').scrollIntoView({ behavior: 'smooth' }));
+	document.querySelector('#button-back-to-top').addEventListener("click", () => document.getElementById('post-beginning').scrollIntoView({ behavior: 'smooth' }));
 }
 
 function loadDates() {
