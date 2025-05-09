@@ -165,6 +165,14 @@ pre {
     background-color: var(--post-background-color, white);
 }
 
+.post:nth-child(odd) {
+    background-color: #FAFFFA;
+}
+
+.post:nth-child(even) {
+    background-color: #F0F0F0;
+}
+
 @media (min-width: 992px) {
     .main-post {
         max-width: 100%;  
