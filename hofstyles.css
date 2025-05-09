@@ -131,7 +131,7 @@ pre {
 
 .main-post>.author>.author-image>img {
     width: 50px;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 .main-post .author {
     height: 50px;
@@ -149,7 +149,7 @@ pre {
 
 .post>.author>.author-image>img {
     width: 40px;
-    border-radius: 20px;
+    border-radius: 8px;
 }
 
 .post>.author>.author-name {
@@ -241,7 +241,7 @@ h1.thread-title {
 
 .conversation-post .author>.author-image>img {
     width: 30px;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .conversation-post .author>.author-name {
